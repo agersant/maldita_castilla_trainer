@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="24">
+  <Forms>
+    <MalditaCastillaSpeedrunTools Class="TCEForm" Encoding="Ascii85">eb,y4,CUfvaAO08kUwpbrcIMnj8O+@Y)vOcXre=*6ck)SR7Hom!YPgq+?q(ceuS!3x2_2f@dofX+fC3(F5SEIBeaG/II8!)3Gi9_-SIv:64?n9@O@?crq_d%.L,vg2=@RvkOqkb3j+TyC}Zgm)BnLa*5r9,FrrNMkg]r!7(p4%?t+Nc%e-W5)KS-W?)UUX+N:D+*Jarok]6V#Yis^q/uMbChkAcycHxYK$@9RVLY,r#8XfsOj0@KE/[:.)FHdOL+Tze)7zEVJwc[WD1iWK5NN?PW=Dly3#mWAQlLHi,5%C4^X;oLv%_?36ZI?lMuu}cy;uh*.w?3Wsg1$YooSd:Fh2WQy//$+(d3XlqlVGx%+@+cH!,:B]ddMSo%_k%}bJ34tH?TmVZkyeS,l@Rwf#1A5vu!fqePM3-elR=N$46*Ix-@,q(+Qgyp4n/6d1(%w$4wd=vykek]9^EKDDLK2xcz*P(R?ED8YUO}3v,Sw.*-OR:jC(2!R[+@qtGMqMKU*t7mH]X6(b]?K8aDipSWRu?{?jWjlMk(jsA3*8GUsenfLnL=DC[;7t5tG!j@L$X]K$ouWK4aSs;L:P!?K:DU_^#8;AuyWh0b5rF4+TAj/fpDJ%!EoT,7iRt2/fR8_GCDpM.BT2.^ci)3_w3]/T%2DElTtCUh$7Gg:!$bwc4v_gz!8=mHpn4q-;T5naBgIH2Fa/Vmd[e0)Rv9CC0BLlPLf#qQgtPSJ03bPPQn%EqSfyH60;k7/9Fll537z3-rI8/Q^f:M%+hcUQ3u2fhB!K5Gb0+t{!?mYmc5v*4J7GVsoj}[VZAZc^uG%mpy,#hK{fmsM9rSTq(!3AQgFdM/7G}S0XxItPf%t0[Ijmscr!42_3g.fwtO5,NQ!42_Fg.fzuO5-Yw!42^U$0_q}D^;kiz!:.hPtpp@LNF/fYcK^k$cYNG5ll,sLl{b[/c$h+5KKzrBN(4l/ckWcAefZKbr@#i/fjU(BAArM$1nyrNIs+$b]flMifzCc,#od-RztAb6x#$b8+Y${3fn]ly)zYp^Ga#-</MalditaCastillaSpeedrunTools>
+  </Forms>
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"map"</Description>
+      <LastState Value="21" Activated="0" RealAddress="00906F58"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00906F58</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <LuaScript>function SetMap(map)
+    local addressList = getAddressList();
+    assert(addressList, "Missing addressList");
+    local mapRecord = addresslist_getMemoryRecordByDescription(addressList, "map");
+    assert(mapRecord, "Missing mapRecord");
+    memoryrecord_setValue(mapRecord, map);
+    if not memoryrecord_isActive(mapRecord) then
+        memoryrecord_freeze(mapRecord);
+    end
+end
+
+function ClickStage_1_1(sender)
+    SetMap(5);
+end
+
+function ClickStage_1_2(sender)
+    SetMap(6);
+end
+
+function ClickStage_1_3(sender)
+    SetMap(7); -- Headless Knight
+end
+
+function ClickStage_1_4(sender)
+    SetMap(8);
+end
+
+function ClickStage_1_5(sender)
+    SetMap(9); -- Zarrampla
+end
+
+function ClickStage_2_1(sender)
+    SetMap(11); -- Autoscroller
+end
+
+function ClickStage_2_2(sender)
+    SetMap(12);
+end
+
+function ClickStage_2_3(sender)
+    SetMap(13); -- Windmills
+end
+
+function ClickStage_2_4(sender)
+    SetMap(14); -- Nuberu
+end
+
+function ClickStage_3_1(sender)
+    SetMap(18);
+end
+
+function ClickStage_3_2(sender)
+    SetMap(19);
+end
+
+function ClickStage_3_3(sender)
+   SetMap(20); -- Manticore
+end
+
+function ClickStage_3_4(sender)
+    SetMap(21);
+end
+
+function ClickStage_3_5(sender)
+    SetMap(22);
+end
+
+function ClickStage_3_6(sender)
+    SetMap(23); -- Crazy Quixote
+end
+
+function ClickStage_4_1(sender)
+    SetMap(25);
+end
+
+function ClickStage_4_2(sender)
+    SetMap(26);
+end
+
+function ClickStage_4_3(sender)
+    SetMap(27);
+end
+
+function ClickStage_4_4(sender)
+    SetMap(29);
+end
+
+function ClickStage_4_5(sender)
+    SetMap(30); -- Lighting issues
+end
+
+function ClickStage_4_6(sender)
+    SetMap(31); -- Ligthing issues
+end
+
+function ClickStage_5_1(sender)
+    SetMap(35);
+end
+
+function ClickStage_5_2(sender)
+    SetMap(36);
+end
+
+function ClickStage_5_3(sender)
+    SetMap(37);
+end
+
+function ClickStage_5_4(sender)
+    SetMap(38);
+end
+
+function ClickStage_5_5(sender)
+    SetMap(39);
+end
+
+function ClickStage_5_6(sender)
+    SetMap(40);
+end
+
+function ClickStage_5_7(sender)
+    SetMap(41);
+end
+
+function ClickStage_5_8(sender)
+    SetMap(43);
+end
+
+function ClickStage_5_9(sender)
+    SetMap(45);
+end
+</LuaScript>
+</CheatTable>
